@@ -40,6 +40,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         <div className="flex-1 flex flex-col gap-5 lg:-mt-5">
           <p className="text-30-bold">
             {session?.id === id ? "Your" : "ALL"} startups
+            {/* <h2>{session?.id}</h2> */}
           </p>
           <ul className="card_grid-sm">
             <UserStartups id={id} />
