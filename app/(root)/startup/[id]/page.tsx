@@ -86,11 +86,11 @@ const page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
         <hr className="divider" />
 
-        {/* **EDITOR'S SELECTED STARTUPS******* */}
+        {/* **EDITORS SELECTED STARTUPS******* */}
 
         {editorPosts?.length > 0 && (
           <div className="max-w-4xl mx-autp">
-            <p className="text-30-semibold ">Editor's Picks</p>
+            <p className="text-30-semibold ">Editors Picks</p>
 
             <ul className="mt-7 card_grid-sm">
               {editorPosts.map((post: StartupTypeCard, i: number) => (

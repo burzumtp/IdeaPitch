@@ -43,8 +43,8 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
         </div>
         <Link href={`/user/${author?._id}`}>
           <Image
-            src={author?.image!}
-            alt={author?.name!}
+            src={author?.image || "/default-avatar.png"}
+            alt={author?.name || "Author"}
             width={48}
             height={48}
             className="rounded-full object-cover aspect-square"
@@ -72,7 +72,7 @@ export const StartupCardSkeleton = () => (
   <>
     {[0, 1, 2, 3, 4].map((index: number) => (
       <li key={cn("skeleton", index)}>
-        <Skeleton className="starup-card_skeleton" />
+        <Skeleton className="startup-card_skeleton" />
       </li>
     ))}
   </>
